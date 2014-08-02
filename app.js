@@ -131,6 +131,11 @@
             console.log( 'handling page "' + name + '"' );
         }
 
+        // Skip dabs
+        if ( name.indexOf( '(disambiguation)' ) !== -1 ) {
+            return;
+        }
+
         // Strip Talk: stuff... -.-
         articleName = name.replace( /^Talk:/, '' );
         articleUrl = url.replace( /Talk:/, '' );
@@ -142,7 +147,7 @@
                 console.log( 'hashtags: ' + hashtags );
             }
 
-            if ( hashtags ) {
+            if ( hashtags.length ) {
                 // Remove Talk: from url
                 tweet = makeTweet( articleName, hashtags, articleUrl );
             }
