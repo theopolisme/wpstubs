@@ -8,6 +8,7 @@
 
         // modules
         http = require( 'http' ),
+        he = require( 'he' ),
         wikibot = require( 'nodemw' ),
         wikichanges = require( 'wikichanges' ),
         Twit = require( 'twit' ),
@@ -72,9 +73,11 @@
                 return false;
             }
 
-            return name
-                .replace( /^wikiproject\s*/i, '' )
-                .replace( /\s*/g, '' );
+            return he.decode(
+                name
+                    .replace( /^wikiproject\s*/i, '' )
+                    .replace( /\s*/g, '' )
+            );
         }
 
         for ( i; i < templateNames.length; i++ ) {
@@ -137,7 +140,7 @@
         }
 
         // Strip Talk: stuff... -.-
-        articleName = name.replace( /^Talk:/, '' );
+        articleName = he.decode( name.replace( /^Talk:/, '' ) );
         articleUrl = url.replace( /Talk:/, '' );
 
         getTemplateModel( name, function ( model ) {
