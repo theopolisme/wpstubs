@@ -1,0 +1,24 @@
+{
+    "dry": false,
+    "debug": false,
+
+    "twitter": {
+        "consumer_key": "KEY",
+        "consumer_secret": "SECRET",
+        "access_token": "TOKEN",
+        "access_token_secret":  "SECRET"
+    },
+
+    "wikipedia": {
+        "server": "en.wikipedia.org",
+        "path": "/w",
+        "debug": false,
+        "username": "USERNAME",
+        "password": "PASSWORD",
+        "userAgent": "USERNAME (USERPAGE URL) / nodemw",
+        "concurrency": 5
+    },
+
+    "nick": "wpstubs-bot",
+    "tweet": "Someone just created a Wikipedia article about \"{{title}}\". Help expand it! {{#hashtags}}#{{.}} {{/hashtags}}{{&link}}"
+}

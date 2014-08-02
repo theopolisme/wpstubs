@@ -1,0 +1,13 @@
+{
+  "name": "wpstubs",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Theopolisme <theopolismewiki@gmail.com>",
+  "license": "MIT license",
+  "dependencies": {
+    "wikichanges": "~0.2.4",
+    "mustache": "~0.8.2",
+    "twit": "~1.1.18",
+    "nodemw": "~0.3.15"
+  }
+}
