@@ -20,5 +20,6 @@
     },
 
     "nick": "wpstubs-bot",
-    "tweet": "Someone created a Wikipedia article about \"{{title}}\". Help expand it! {{#hashtags}}#{{.}} {{/hashtags}}{{&link}}"
+    "tweet": "Someone created a Wikipedia article about \"{{title}}\". Help expand it! {{#hashtags}}#{{.}} {{/hashtags}}{{&link}}",
+    "urlparams": "src=wpstubs&tour=firstedit"
 }

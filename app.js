@@ -115,7 +115,7 @@
         return Mustache.render( template, {
             title: name,
             hashtags: reducedHashtags,
-            link: url + ( url.indexOf( '?' ) === -1 ? '?' : '&' ) + 'src=wpstubs'
+            link: url + ( url.indexOf( '?' ) === -1 ? '?' : '&' ) + CONFIG.urlparams
         } );
     }
 
