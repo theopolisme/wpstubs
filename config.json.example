@@ -21,5 +21,13 @@
 
     "nick": "wpstubs-bot",
     "tweet": "Someone created a Wikipedia article about \"{{title}}\". Help expand it! {{#hashtags}}#{{.}} {{/hashtags}}{{&link}}",
-    "urlparams": "src=wpstubs&tour=firstedit"
+    "urlparams": "src=wpstubs&tour=firstedit",
+
+    "ignorelist": [
+        "wikiproject banner shell",
+        "wikiproject shell banner",
+        "wikiprojectbannershell",
+        "wikiproject articles for creation",
+        "wikiproject cleanup listing"
+    ]
 }

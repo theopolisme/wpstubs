@@ -17,15 +17,7 @@
         // const
         CONST = {
             linkLength: 22,
-            templateTitleRegex: /<template[^>]*>\s*<title[^>]*>\s*(.*?)\s*<\/title>/g,
-            ignoreList: [
-                // ignore shells and maintenance projects
-                'wikiproject banner shell',
-                'wikiproject shell banner',
-                'wikiprojectbannershell',
-                'wikiproject articles for creation',
-                'wikiproject cleanup listing'
-            ]
+            templateTitleRegex: /<template[^>]*>\s*<title[^>]*>\s*(.*?)\s*<\/title>/g
         },
 
         // config
@@ -71,7 +63,7 @@
                 return false;
             }
 
-            if ( CONST.ignoreList.indexOf( name.toLowerCase() ) !== -1 ) {
+            if ( CONFIG.ignorelist.indexOf( name.toLowerCase() ) !== -1 ) {
                 return false;
             }
 
