@@ -19,10 +19,12 @@
             linkLength: 22,
             templateTitleRegex: /<template[^>]*>\s*<title[^>]*>\s*(.*?)\s*<\/title>/g,
             ignoreList: [
-                // ignore shells
+                // ignore shells and maintenance projects
                 'wikiproject banner shell',
                 'wikiproject shell banner',
-                'wikiprojectbannershell'
+                'wikiprojectbannershell',
+                'wikiproject articles for creation',
+                'wikiproject cleanup listing'
             ]
         },
 
