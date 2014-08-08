@@ -34,7 +34,6 @@
             titles: name
         }, function ( data, next, raw ) {
             var xml = data.pages[data.pageids[0]].revisions[0].parsetree;
-            console.log( xml );
             callback && callback( xml );
         }, 'POST' );
     }
@@ -67,11 +66,16 @@
                 return false;
             }
 
-            return he.decode(
-                name
-                    .replace( /^wikiproject\s*/i, '' )
-                    .replace( /\s*/g, '' )
-            );
+            // Convert html entities to normal characters
+            name = he.decode( name );
+
+            // Remove "WikiProject" from beginning of hashtag
+            name = name.replace( /^wikiproject/i, '' );
+
+            // Hashtags can only contain alphanumeric characters and underscores
+            name = name.replace( /[^a-z0-9_]/gi, '' );
+
+            return name;
         }
 
         for ( i; i < templateNames.length; i++ ) {
@@ -145,7 +149,6 @@
             }
 
             if ( hashtags.length ) {
-                // Remove Talk: from url
                 tweet = makeTweet( articleName, hashtags, articleUrl );
             }
 
