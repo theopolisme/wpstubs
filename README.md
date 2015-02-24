@@ -16,3 +16,12 @@ Tweeting now as [@wpstubs](https://twitter.com/wpstubs)!
  - modify `config.json` with credentials
  - `node app.js`
  - yay!
+
+## Deploying on wmflabs
+ - `ssh {username}@trusty.tools.wmflabs.org -y`
+ - `become {project}`
+ - `mkdir wpstubs && cd wpstubs`
+ - `git clone https://github.com/theopolisme/wpstubs.git`
+ - `npm install`
+ - `jstart -N wpstubs -mem 1G node /data/project/{project}/wpstubs/wpstubs/app.js`
+
