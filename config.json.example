@@ -10,6 +10,7 @@
     },
 
     "wikipedia": {
+        "protocol": "https",
         "server": "en.wikipedia.org",
         "path": "/w",
         "debug": false,
